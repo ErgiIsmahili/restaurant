@@ -27,18 +27,24 @@ class RestaurantListScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
 
     return Scaffold(
-  appBar: AppBar(
-    title: const Center(
-      child: Text(
-        'Restaurants',
-        style: TextStyle(
-          fontSize: 32, 
+      appBar: AppBar(
+        title: const Center(
+          child: Text(
+            'Restaurants',
+            style: TextStyle(
+              fontSize: 32, 
+            ),
+          ),
         ),
+        toolbarHeight: 80,
       ),
-    ),
-    toolbarHeight: 80, 
-  ),
-);
+      body: const TextField(
+        decoration: InputDecoration(
+          hintText: 'Search',
+          border: OutlineInputBorder(),
+        )
+      )
+    );
 
   }
 }
